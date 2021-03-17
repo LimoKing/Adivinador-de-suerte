@@ -1,0 +1,35 @@
+body
+{
+    justify-content: center;
+}
+#bienvenida
+{
+    text-align: center;
+    font-size: 75px;
+    margin: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#preguntar-suerte
+{
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section
+{
+    text-align: center;
+    margin: auto;
+}
+#boton-adivinador
+{
+  background-color: #e7e7e7;
+  border: black;
+  border-style: solid;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  justify-content: center;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
