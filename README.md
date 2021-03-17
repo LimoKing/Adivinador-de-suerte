@@ -18,9 +18,13 @@ Dale click al botón y listo
 - Github
 
 ## Versionado 📌
-1.1v 
+1.2v 
 
 ## Ultima actualización
+v1.2
+Añadido un verificador de input a la pagina web
+
+v1.1
 Añadido un input para que el usuario coloque su signo zodiacal mediante el uso del metodo prompt. Se que no es el más optimo ni el indicado, no solo por lo feo si no también por los problemas de seguridad que conllevan, proximamente se actualizará a forms de html con su debido verificador.
 
 ## Futuras actualizaciones
