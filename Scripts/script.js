@@ -53,26 +53,39 @@ function cambiarColor()
 function restaurarColor()
 {
     //Pedimos el signo
-    const signo = prompt("¿Cual es tu signo?");
+    let signo;
+    signo = prompt("¿Cual es tu signo?");
+    signo = signo.toLowerCase();
+    //Verificamos que es valido el input
+    if ((signo === "aries") || (signo === "tauro") || (signo === "geminis") || (signo === "géminis") 
+    || (signo === "cancer") || (signo === "cáncer") || (signo === "leo") || (signo === "virgo")
+    || (signo === "libra") || (signo === "escorpio") || (signo === "sagitario") || (signo === "capricornio")
+    || (signo === "acuario") || (signo === "piscis"))
+    {
+        //Creamos el mensaje
+        let finalMessage = crearMensaje(signo);
 
-    //Creamos el mensaje
-    let finalMessage = crearMensaje(signo);
+        //Declarar variables que se usarán
+        let nuevoP = document.createElement("p");
+        let nodoTexto = document.createTextNode(finalMessage);
+        nuevoP.appendChild(nodoTexto);
+        let seccionUno = document.getElementById("seccion-uno");
 
-    //Declarar variables que se usarán
-    let nuevoP = document.createElement("p");
-    let nodoTexto = document.createTextNode(finalMessage);
-    nuevoP.appendChild(nodoTexto);
-    let seccionUno = document.getElementById("seccion-uno");
-
-    //Mostrar el mensaje
-    boton.style.backgroundColor = "";
-    preguntarSuerte.hidden = true;
-    bienvenida.hidden = true;
-    nuevoP.style.textAlign = "center";
-    nuevoP.style.fontSize = "50px";
-    nuevoP.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif;";
-    seccionUno.insertBefore(nuevoP, preguntarSuerte);
-    boton.style.visibility = "hidden"
+        //Mostrar el mensaje
+        boton.style.backgroundColor = "";
+        preguntarSuerte.hidden = true;
+        bienvenida.hidden = true;
+        nuevoP.style.textAlign = "center";
+        nuevoP.style.fontSize = "50px";
+        nuevoP.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif;";
+        seccionUno.insertBefore(nuevoP, preguntarSuerte);
+        boton.style.visibility = "hidden"
+    }
+    else
+    {
+        alert("Ingrese el signo del zodiaco correctamente");
+        boton.style.backgroundColor = "";
+    }
 }
 
 //Evento para cambiar de color
